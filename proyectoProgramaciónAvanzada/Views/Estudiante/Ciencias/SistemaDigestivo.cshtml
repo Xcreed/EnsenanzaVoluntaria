@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "SistemaDigestivo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <hr />
+    <h2>¿Qué es el Sistema Digestivo?</h2>
+    <p>El aparato digestivo está formado por el tracto gastrointestinal, también llamado tracto digestivo, y el hígado, el páncreas y la vesícula biliar. El tracto gastrointestinal es una serie de órganos huecos unidos en un tubo largo y retorcido que va desde la boca hasta el ano. Los órganos huecos que componen el tracto gastrointestinal son la boca, el esófago, el estómago, el intestino delgado, el intestino grueso y el ano. El hígado, el páncreas y la vesícula biliar son los órganos sólidos del aparato digestivo.</p>
+    <br />
+    <hr />
+    <h2>¿Por qué es importante la digestión?</h2>
+    <p>La digestión es importante porque el cuerpo necesita los nutrientes provenientes de los alimentos y bebidas para funcionar correctamente y mantenerse sano. Las proteínas, las grasas, los carbohidratos, las vitaminas, los minerales y el agua son nutrientes. El aparato digestivo descompone químicamente los nutrientes en partes lo suficientemente pequeñas como para que el cuerpo pueda absorber los nutrientes y usarlos para la energía, crecimiento y reparación de las células.</p>
+    <br />
+    <hr />
+    <h2>¿Cómo funciona el Sistema Digestivo?</h2>
+    <p>Cada parte del aparato digestivo ayuda a transportar los alimentos y líquidos a través del tracto gastrointestinal, a descomponer químicamente los alimentos y líquidos en partes más pequeñas, o ambas cosas. Una vez que los alimentos han sido descompuestos químicamente en partes lo suficientemente pequeñas, el cuerpo puede absorber y transportar los nutrientes adonde se necesitan. El intestino grueso absorbe agua y los productos de desecho de la digestión se convierten en heces. Los nervios y las hormonas ayudan a controlar el proceso digestivo.</p>
+    <br />
+    <img class="materialboxed" width="300" src="../../Imagenes/Sistema Digestivo.jpg" />
+    <blockquote>
+        Imagen que muestra el Sistema Digestivo y sus partes.
+    </blockquote>
+    <div class="form-group" style="margin-top:25px">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Volver", "Index", null, null, new { @class = "waves-effect waves-light btn-small" })
+        </div>
+    </div>
+</div>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
+

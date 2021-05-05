@@ -1,0 +1,70 @@
+﻿@model IEnumerable<proyectoProgramaciónAvanzada.Models.USUARIOS>
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "RegistrarEstudiante";
+}
+
+<section>
+
+    <div class="container">
+
+        <h2 style="text-align:center">Lista de profesores</h2>
+
+        <div id="cuadro" style="margin: 10px;">
+
+            <table class="table">
+                <tr style="background-color:#e0e0e0">
+                    <th>
+                        @Html.DisplayNameFor(model => model.NOMBRE)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.APELLIDO1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.APELLIDO2)
+                    </th>
+                    <th>
+                        @Html.DisplayName("Correo electrónico")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Institución")
+                    </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NOMBRE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.APELLIDO1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.APELLIDO2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.INSTITUCION.NOMBRE)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Detalles", "Detalles", new { id = item.ID_USUARIO }, new { @class = "waves-effect waves-light btn-small" })
+                            @Html.ActionLink("Actualizar Profesor", "ActualizarEstudiante", "Profesor", new { id = item.ID_USUARIO }, new { @class = "waves-effect waves-light btn-small" })
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+        </div>
+
+</section>
+

@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Continentes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <hr />
+    <h2>Definición de Continente:</h2>
+    <p>
+        Se considera como continente a una gran extensión de Tierra que se diferencia de otras menores o sumergidas por conceptos geográficos, como son los océanos; y culturales, como la etnografía.
+
+        La división de la Tierra en continentes es convencional, y suelen reconocerse entre cuatro y siete continentes; por ejemplo, una división en seis continentes suele ser: Asia, Antártida, Europa, África, Oceanía y América.
+    </p>
+    <br />
+    <p>
+        La palabra continente viene del latín continente, que significa «mantener juntos» y deriva del continentes tierra, «las tierras continuas». Literalmente, el término se refiere a una gran extensión de tierra firme en la superficie del globo terrestre. Sin embargo, esta definición estrictamente geográfica es frecuentemente modificada de acuerdo a criterios históricos y culturales. Así, hay algunos modelos de continentes que consideran Europa y Asia como dos continentes, mientras que Eurasia se considera una región geopolítica, y otros lo hacen a la inversa.
+
+        La definición de continente no es estricta sino convencional, existen varios modelos en uso que reconocen entre cuatro y siete continentes. Pero esto no ha sido siempre así y esos modelos han variado a lo largo de la historia y el descubrimiento de nuevos territorios.
+
+        En su acepción común, la zona continental incluye también las islas pequeñas situadas a corta distancia de la costa, pero no las que están separadas por brazos de mar importantes. Desde una perspectiva científica, el continente también incluye las islas vinculadas a las placas continentales, del modo en que las islas británicas pertenecen a Eurasia.
+    </p>
+    <img style="margin-left: 10px;" class="materialboxed" width="650" src="../../Imagenes/continentes 1.jpg" />
+    <br />
+    <hr />
+    <h2>Modelos de División de Continentes:</h2>
+    <p>
+        En realidad no existe una única forma de fijar el número de continentes y depende de cada área cultural determinar si dos grandes masas de tierra unidas forman uno o dos continentes, y en concreto, decidir los límites
+        entre Europa y Asia (Eurasia) por una parte y América del Norte y América del Sur (América o las Américas) por otra. Los principales modelos son los siguientes:
+    </p>
+    <ul>
+        <h4>4 continentes:</h4>
+        <p>Algunos sugieren que Europa, África y Asia deberían conformar un único continente llamado Eurafrasia o Afroeurasia. Este modelo se basa en una definición estricta de continente como un área de tierra continua, en donde fronteras artificiales como los canales de Suez y Panamá no serían verdaderas barreras intercontinentales.</p>
+        <br />
+        <h4>5 continentes:</h4>
+        <p>Modelo que incluye solo los continentes habitados (excluyendo la Antártida),3​4​ que son los representados en los 5 anillos del logotipo olímpico. Este es el modelo que usa la ONU.</p>
+        <br />
+        <h4>6 continentes (modelo tradicional):</h4>
+        <p>Al modelo típico de cinco continentes se le ha agregado la Antártida. Este modelo es de uso común en América Latina, las ex colonias francesas, en los países europeos en que se hablan lenguas romances (España, Portugal, Italia, Francia, Rumanía, Bélgica y Andorra) y en Grecia.</p>
+        <br />
+        <h4>6 continentes (modelo geológico):</h4>
+        <p>Guarda una relación aproximada con las placas tectónicas continentales, por lo que Europa y Asia forman un solo continente denominado Eurasia y en cambio América está dividida en dos continentes (América del Norte y América del Sur). Es el modelo preferido por la comunidad geográfica de los países de la antigua Unión Soviética, Europa Oriental y por Japón.</p>
+        <br />
+        <h4>7 continentes:</h4>
+        <p>Modelo convencional utilizado habitualmente en los países de habla inglesa, en gran parte de Europa Occidental, India, Pakistán, Filipinas y China. El concepto Oceanía se suele reemplazar por el de continente australiano y Centroamérica está incluida dentro del continente de Norteamérica bajo este criterio. Este modelo es usado por varios entidades internacionales.</p>
+        <br />
+    </ul>
+    <p>A continuación se presenta una animación que muestra los principales modelos de división anteriormente mostrados</p>
+    <br />
+    <img class="materialboxed" width="300" src="../../Imagenes/continentes 2.gif" />
+    <div class="form-group" style="margin-top:25px">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Volver", "Index", null, null, new { @class = "waves-effect waves-light btn-small" })
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
+

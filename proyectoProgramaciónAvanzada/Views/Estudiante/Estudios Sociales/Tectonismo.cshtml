@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Tectonismo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <hr />
+    <h2>¿Qué es el Tectonismo?</h2>
+    <p>El tectonismo son las transformaciones internas que sufre corteza terrestre por medio del acomodamiento de las capas que la forman. Estas transformaciones se van dando muy lentamente a lo largo del tiempo.</p>
+    <br />
+    <p>La vida en la Tierra se inició hace millones de años y desde entonces el planeta ha permanecido en evolución, hasta llegar a la forma que hoy tiene.</p>
+    <br />
+    <p>Sus placas superficiales continúan moviéndose, los continentes siguen cambiando de forma, y las capas rocosas están continuamente reacomodándose y reformándose. Esto es debido a la actividad tectónica.</p>
+    <br />
+    <p>Todos los planetas terrestres, también llamados telúricos o rocosos, han pasado por un proceso de desarrollo, cada uno con características tectónicas únicas. Además de la Tierra, planetas como Venus y Marte todavía tienen tectonismo activo.</p>
+    <br />
+    <p>Los cuerpos más pequeños, como la Luna y Mercurio no se cree que estén activos en la actualidad, pero los geólogos dicen que por sus características se ve que tuvieron un pasado activo.</p>
+    <br />
+    <hr />
+    <h2>Características del Tectonismo</h2>
+    <p>El tectonismo es el conjunto de movimientos que afectan a la corteza terrestre y provocan que las capas rocosas se deformen, se reacomoden o se rompan.</p>
+    <br />
+    <p>El tectonismo también es llamado diastrofismo y puede ser de dos tipos:</p>
+    <br />
+    <h4>Tectonismo Orogénico:</h4>
+    <img class="materialboxed" width="600" src="../../Imagenes/tectonismo orogénico.png" />
+    <br />
+    <p> Es cuando los movimientos se producen en forma horizontal dando origen a las montañas y a zonas con pliegues y fallas.</p>
+    <br />
+    <h4>Tectonismo Epirogénico:</h4>
+    <img class="materialboxed" width="600" src="../../Imagenes/tectonismo epirogénicos.jpg" />
+    <br />
+    <p>Es cuando los movimientos se dan en ascenso y descenso. No hay cambios significativos en la superficie pero como resultado de ellos se observan cambios en las líneas costeras y en la el aspecto de los continentes.</p>
+    <hr />
+    <h2>Tipos de Movimientos de las Placas Tectónicas y Cómo Pueden Transformar la Tierra</h2>
+    <br />
+    <h4>Movimiento Divergente</h4>
+    <img class="materialboxed" width="600" src="../../Imagenes/movimiento divergente.png" />
+    <br />
+    <p>Es cuando dos placas se apartan y producen lo que se llama una falla o abertura en la tierra. El magma llena la grieta y se forma una nueva corteza.</p>
+    <br />
+    <h4>Movimiento Convergente</h4>
+    <img class="materialboxed" width="600" src="../../Imagenes/movimiento convergente.png" />
+    <br />
+    <p>Es cuando dos placas se unen. Una placa se desliza por debajo de la otra en un proceso llamado subducción. Esto origina cadenas montañosas, por ejemplo las Rocosas o el Himalaya, son el resultado de esta actividad tectónica.</p>
+    <br />
+    <p>La subducción origina una profunda fusión debajo de la superficie de la Tierra, formando charcos de magma. Los terremotos profundos ocurren en estas regiones. Algo de este magma llega eventualmente a la superficie y entra en erupción volcánica.</p>
+    <br />
+    <p>El anillo de fuego o anillo de montañas volcánicas a lo largo del litoral Pacífico, es un ejemplo de este tipo de choque. El Anillo de Fuego es la zona de mayor registro de actividad sísmica y volcánica en la Tierra, con un 75% de los volcanes activos del mundo.</p>
+    <br />
+    <p>Este enorme cinturón se ubica bajo la cuenca del Océano Pacífico, tiene forma de herradura y se extiende a lo largo de 40.000 kilómetros.</p>
+    <br />
+    <h4>Movimiento Deslizante o Transformante</h4>
+    <p>Es cuando las placas se deslizan o desplazan en direcciones contrarias friccionándose. Este tipo de movimiento también provoca fallas.</p>
+    <br />
+    <p>La falla de San Andrés en California es el más famoso ejemplo de este tipo de transformación. Estas transformaciones comúnmente no tienen volcanes, pero están caracterizadas por fuertes terremotos.</p>
+    <img class="materialboxed" width="600" src="../../Imagenes/falla de san andres.jpg" />
+    <blockquote>
+        Imagen de la falla de San Andrés.
+    </blockquote>
+    <br />
+    <p>La energía friccional que se forma en sus bordes no tiene modo de escapar, dando como resultado desde un leve temblor hasta un gran sismo, según la parte de la falla donde se forme esta energía.</p>
+    <br />
+    <div class="form-group" style="margin-top:25px">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Volver", "Index", null, null, new { @class = "waves-effect waves-light btn-small" })
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>

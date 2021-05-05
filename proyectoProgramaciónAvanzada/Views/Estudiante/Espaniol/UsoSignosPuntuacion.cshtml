@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "UsoSignosPuntuacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <hr />
+    <h2>Uso de Signos de Puntuación:</h2>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">El Punto</div>
+            <div class="collapsible-body"><span>El punto (.) es un signo ortográfico circular de pequeñas dimensiones que se usa,  fundamentalmente,   como signo de puntuación. Su función principal es señalar el final de un enunciado (que no sea ni interrogativo, ni exclamativo), de un párrafo o de un texto. Después de punto -salvo en el caso del utilizado en las abreviaturas- se utiliza mayúscula. El punto se escribe siempre sin separación del elemento que lo precede -sea este una palabra, un número u otro signo- y separado por un espacio del elemento que lo sigue.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">La Coma</div>
+            <div class="collapsible-body"><span>La coma (,) es un signo de puntuación que delimita unidades lingüísticas inferiores al enunciado. Se escribe pegada a la palabra o al signo que la precede y separada por un espacio de la palabra o el signo que la sigue.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">El Punto y Coma</div>
+            <div class="collapsible-body"><span>El punto y coma (;)  se escribe pegado a la palabra o al signo que lo precede, y separado por un espacio de la palabra o el signo que lo sigue. Presenta  una pausa mayor que la marcada por la coma y menor que la señalada por el punto.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">Los Dos Puntos</div>
+            <div class="collapsible-body"><span>Los dos puntos (:) son un signo de puntuación que se escribe pegado a la palabra o signo que lo antecede, y separado por un espacio de la palabra o signo que lo sigue. Los dos puntos detienen el discurso para llamar la atención sobre lo que sigue.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">El Paréntesis</div>
+            <div class="collapsible-body"><span>Son un signo ortográfico doble  ( ) que se usa generalmente para insertar en un enunciado una información complementaria o aclaratoria. Se escriben pegados al primer y al último carácter que enmarcan, y separados por un espacio del elemento que los precede o los sigue.</span></div>
+        </li>
+    </ul>
+    <div class="form-group" style="margin-top:25px">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Volver", "Index", null, null, new { @class = "waves-effect waves-light btn-small" })
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
+

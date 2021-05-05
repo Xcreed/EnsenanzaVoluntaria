@@ -1,0 +1,80 @@
+﻿@model proyectoProgramaciónAvanzada.Models.MATERIAL_TUTORIA
+
+@{
+    ViewBag.Title = "crearArchivo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Agregar archivo</h2>
+
+
+
+<section>
+
+    <div class="container">
+
+        <h4 style="color: green;">@ViewBag.correcto</h4>
+        <h4 style="color: red;">@ViewBag.error</h4>
+
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Cuerpo del mensaje:</h4>
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @*@<div class="form-group">
+                    @Html.LabelFor(model => model.ID_TUTORIA_CURSOS, "ID_TUTORIA_CURSOS", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("ID_TUTORIA_CURSOS", ViewBag.tutorias as SelectList, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ID_TUTORIA_CURSOS, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.Hidden("DIRECCION_ARCHIVO", "~/Files/")
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TITULO_COMENTARIO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TITULO_COMENTARIO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TITULO_COMENTARIO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CUERPO_COMENTARIO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CUERPO_COMENTARIO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CUERPO_COMENTARIO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+
+                        <input type="submit" value="Continuar" class="btn btn-default" />
+
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</section>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+    });
+</script>

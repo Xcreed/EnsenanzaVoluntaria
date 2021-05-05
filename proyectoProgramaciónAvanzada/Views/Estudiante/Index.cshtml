@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+
+    <div class="black white-text center">
+        <div class="black container">
+            <br />
+        </div>
+        <div class="container">
+            <div class="Section">
+                <h3>Estudios Sociales</h3>
+                <p>
+                    En esta sección podrá encontrar material relacionado a la materia de Estudios
+                    Sociales, a continuación se le presentan los siguientes temas disponibles para que
+                    puedas estudiarlos:
+                </p>
+                <div class="Section">
+                    @Html.ActionLink("Continentes", "Continentes", "Estudiante", null, new { @class = "waves-effect waves-light btn" })
+                    @Html.ActionLink("Tectonismo", "Tectonismo", "Estudiante", null, new { @class = "waves-effect waves-light btn" })
+                    @Html.ActionLink("Historia de Costa Rica", "HistoriaCR", "Estudiante", null, new { @class = "waves-effect waves-light btn" })
+                    <div class="container">
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="../Imagenes/coliseo-romano-wallpaper-hd.jpg" alt="" />
+        </div>
+    </div>
+
+    <div class="black white-text center">
+        <div class="black container">
+            <br />
+        </div>
+        <div class="container">
+            <div class="Section">
+                <h3>Español</h3>
+                <p>
+                    En esta sección podrá encontrar material relacionado a la materia de Español
+                    , a continuación se le presentan los siguientes temas disponibles para que
+                    puedas estudiarlos:
+                </p>
+                <div class="Section">
+                    @Html.ActionLink("Uso de los Signos de Puntuación", "UsoSignosPuntuacion", "Estudiante", null, new { @class = "waves-effect waves-light btn orange darken-1" })
+                    @Html.ActionLink("Uso de la V y la B", "UsoVyB", "Estudiante", null, new { @class = "waves-effect waves-light btn orange darken-1" })
+                    @Html.ActionLink("Estructura de la Oración", "EstructuraOracion", "Estudiante", null, new { @class = "waves-effect waves-light btn orange darken-1" })
+                    <div class="container">
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="../Imagenes/biblioteca_libros_prohibidos.jpg" alt="" />
+        </div>
+    </div>
+
+    <div class="black white-text center">
+        <div class="black container">
+            <br />
+        </div>
+        <div class="container">
+            <div class="Section">
+                <h3>Ciencias</h3>
+                <p>
+                    En esta sección podrá encontrar material relacionado a la materia de Ciencias
+                    , a continuación se le presentan los siguientes temas disponibles para que
+                    puedas estudiarlos:
+                </p>
+                <div class="Section">
+                    @Html.ActionLink("Sistema Digestivo", "SistemaDigestivo", "Estudiante", null, new { @class = "waves-effect waves-light btn green darken-1" })
+                    @Html.ActionLink("Esqueleto Humano", "Esqueleto", "Estudiante", null, new { @class = "waves-effect waves-light btn green darken-1" })
+                    @Html.ActionLink("La Célula", "Celula", "Estudiante", null, new { @class = "waves-effect waves-light btn green darken-1" })
+                    <div class="container">
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="../Imagenes/quimica1.jpg" alt="" />
+        </div>
+    </div>
+
+    <div class="black white-text center">
+        <div class="black container">
+            <br />
+        </div>
+        <div class="container">
+            <div class="Section">
+                <h3>Matemáticas</h3>
+                <p>
+                    En esta sección podrá encontrar material relacionado a la materia de Matemáticas
+                    , a continuación se le presentan los siguientes temas disponibles para que
+                    puedas estudiarlos:
+                </p>
+                <div class="Section">
+                    @Html.ActionLink("Suma", "Suma", "Estudiante", null, new { @class = "waves-effect waves-light btn deep-orange darken-3" })
+                    @Html.ActionLink("Resta", "Resta", "Estudiante", null, new { @class = "waves-effect waves-light btn deep-orange darken-3" })
+                    @Html.ActionLink("Multiplicación", "Multiplicacion", "Estudiante", null, new { @class = "waves-effect waves-light btn deep-orange darken-3" })
+                    <div class="container">
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="../Imagenes/matematicas.jpg" alt="" />
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
+    </section>

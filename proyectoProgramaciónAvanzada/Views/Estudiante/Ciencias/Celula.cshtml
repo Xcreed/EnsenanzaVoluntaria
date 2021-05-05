@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Celula";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <hr />
+    <h2>¿Qué es la Célula?</h2>
+    <p>En biología, es la unidad más pequeña que puede vivir por sí sola y que constituye todos los organismos vivos y los tejidos del cuerpo. Una célula se compone de tres partes principales: la membrana celular, el núcleo y el citoplasma. La membrana celular rodea la célula y controla las sustancias que entran y salen de esta. El núcleo es la estructura dentro de la célula que contiene el nucléolo y la mayoría del ADN de la célula. También es la parte donde se elabora la mayor parte del ARN. El citoplasma es el líquido dentro de la célula que contiene otras partículas celulares diminutas con funciones específicas, como el aparato de Golgi, las mitocondrias y el retículo endoplasmático. El citoplasma es donde sucede la mayor parte de las reacciones químicas y se elabora la mayoría de las proteínas. El cuerpo humano se compone de más de 30 billones de células.</p>
+    <br />
+    <hr />
+    <h2>¿Qué es una Célula Animal?</h2>
+    <p>La célula animal es una célula eucariota caracterizada por la presencia de núcleo, membrana plasmática y citoplasma. Se diferencia de la célula vegetal por la ausencia de pared celular y cloroplastos. Además se pueden encontrar vacuolas más pequeñas y más abundantes en comparación con las de una célula vegetal.</p>
+    <br />
+    <p>Las células animales pueden adoptar diversas formas. También son capaces de capturar y digerir otras estructuras.</p>
+    <br />
+    <p>Algunas de las células animales más destacadas son las neuronas del sistema nervioso, los leucocitos del sistema inmunitario, los óvulos y los espermatozoides del sistema reproductor.</p>
+    <br />
+    <img class="materialboxed" width="300" src="../../Imagenes/Celula Animal.jpg" />
+    <blockquote>
+        Imagen que muestra la Célula Animal y sus partes.
+    </blockquote>
+    <br />
+    <hr />
+    <h2>¿Qué es una Célula Vegetal?</h2>
+    <p>La célula vegetal es una célula eucariota que se caracteriza por la presencia de una pared celular que le da soporte y protección, a la vez que permite la comunicación celular. Esta pared puede encontrarse en otros tipos de células eucariotas.</p>
+    <br />
+    <p>Al igual que la célula animal, presenta un núcleo diferenciado, membrana y citoplasma.</p>
+    <br />
+    <p>Sin embargo, la célula vegetal contiene partes únicas que se encargan del proceso de la fotosíntesis. Algo fundamental, pues permite a las plantas liberar el oxígeno que los seres vivos necesitan para existir.</p>
+    <br />
+    <img class="materialboxed" width="300" src="../../Imagenes/Celula Vegetal.jpg" />
+    <blockquote>
+        Imagen que muestra la Célula Vegetal y sus partes.
+    </blockquote>
+    <div class="form-group" style="margin-top:25px">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Volver", "Index", null, null, new { @class = "waves-effect waves-light btn-small" })
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>

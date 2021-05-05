@@ -1,0 +1,31 @@
+﻿@model IEnumerable<proyectoProgramaciónAvanzada.Models.MATERIAL_TUTORIA>
+
+@{
+    ViewBag.Title = "Archivos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+    <div class="container">
+        <h2 style="text-align:center">Archivos de las tutorías</h2>
+
+        @foreach (var item in Model)
+        {
+            <div class="container grey lighten-4" style="width: 30vw; padding: 15px; margin-bottom: 30px;">
+                <div class="titulo">
+                    <h4>@Html.DisplayTextFor(modelItem => item.TITULO_COMENTARIO)</h4>
+                </div>
+                <div class="contenido">
+                    <p>
+                        @Html.DisplayTextFor(modelItem => item.CUERPO_COMENTARIO)
+                    </p>
+
+                    <form action="/Estudiante/Descargar" method="post">
+                        <input type="hidden" name="RUTA" readonly value="@Html.DisplayTextFor(modelItem => item.DIRECCION_ARCHIVO)" />
+                        <input class="waves-effect waves-light btn" type="submit" value="Descargar Contenido" style="color: white;" />
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+
+</section>

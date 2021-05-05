@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNet.Identity
+
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <li>
+                        @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    </li>
+                }
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>@Html.ActionLink("Cursos", "Index", "Estudiante")</li>
+                <li>@Html.ActionLink("Archivos de Estudio", "Archivos", "Estudiante")</li>
+                <li>@Html.ActionLink("Calificar Profesor", "CalificaProfe", "Estudiante")</li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<ul class="sidenav" id="menu-side">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="../Imagenes/cuadernos-y-utiles-escolares.jpg" />
+            </div>
+            <a href="#">
+                <img src="../Imagenes/LogoEstudiante.png" alt="" class="circle" />
+            </a>
+            <a href="">
+                <span class="name white-text">Estudiante 1</span>
+            </a>
+        </div>
+    </li>
+</ul>
+

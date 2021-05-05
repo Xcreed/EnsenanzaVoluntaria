@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Resta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <hr />
+    <h2>¿Qué es la Resta?</h2>
+    <p>La resta, también conocida como sustracción, es una operación que consiste en sacar, recortar, empequeñecer, reducir o separar algo de un todo. Restar es una de las operaciones esenciales de la matemática y se considera como la más simple junto a la suma, que es el proceso inverso.</p>
+    <img class="materialboxed" width="300" src="../../Imagenes/ejemplo resta.png" />
+    <br />
+    <hr />
+    <h2>Pasos Para Hacer una Resta Sin Llevada:</h2>
+    <p>Vamos a hacer la resta: 38 – 15 =</p>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">38 es el minuendo y 15 es el sustraendo, por lo tanto, colocamos el 38 y debajo el 15, de manera que el 5 esté justo debajo del 8.</div>
+            <div class="collapsible-body"><span><img class="materialboxed" width="300" src="../../Imagenes/paso1 resta sin llevada.png" /><br />Empezamos restando la columna de las unidades:   8 – 5 = 3, y escribimos el 3 debajo de la columna de las unidades.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">Ahora restamos la columna de las decenas:   3 – 1 = 2, y escribimos el 2 debajo de la columna de las decenas.</div>
+            <div class="collapsible-body"><span><img class="materialboxed" width="300" src="../../Imagenes/paso2 resta.png" /><br />El resultado de restar 38 – 15 = 23.</span></div>
+        </li>
+    </ul>
+    <br />
+    <hr />
+    <h2>Pasos Para Hacer una Resta Sin Llevada:</h2>
+    <p>Vamos a restar 32 – 17 =</p>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">Colocamos el 17 debajo del 32 de manera que coincidan las unidades en la misma columna, es decir, el 7 y el 2.</div>
+            <div class="collapsible-body"><span><img class="materialboxed" width="300" src="../../Imagenes/paso1 resta con llevada.png" /><br />Empezamos restando la columna de las unidades:  2 – 7, pero como 2 es menor que 7  tenemos que pedir ayuda a la siguiente columna. Esta columna se quita una decena (3 – 1) para dar 10 unidades (2 + 10). Ahora sí podemos restar  12 – 7 = 5</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">Restamos la columna de las decenas:  2 – 1 = 1</div>
+            <div class="collapsible-body"><span><img class="materialboxed" width="300" src="../../Imagenes/paso2 resta con llevada.png" /><br />Por lo tanto, el resultado de la resta 32 – 17 = 15</span></div>
+        </li>
+    </ul>
+    <div class="form-group" style="margin-top:25px">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Volver", "Index", null, null, new { @class = "waves-effect waves-light btn-small" })
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
+

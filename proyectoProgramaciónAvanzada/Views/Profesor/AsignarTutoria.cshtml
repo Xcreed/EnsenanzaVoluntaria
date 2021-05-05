@@ -1,0 +1,119 @@
+﻿@model proyectoProgramaciónAvanzada.Models.TUTORIA_CURSOS
+@using proyectoProgramaciónAvanzada.Models
+
+@{
+    ViewBag.Title = "AsignarTutoria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+
+    <div class="container">
+
+
+        <h2 style="text-align:center">Asignar Tutoría</h2>
+        <div style="margin: 10px;">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    
+                    <div class="form-group">
+                        @Html.Label("Estudiantes", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div>
+                            @{
+                                List<SelectListItem> estudiantesNombreCompleto = new List<SelectListItem>();
+                                foreach (var estudiante in ViewBag.estudiantes)
+                                {
+                                    var nombreCompleto = estudiante.NOMBRE + " " + estudiante.APELLIDO1 + " " + estudiante.APELLIDO2;
+                                    var id = estudiante.ID_USUARIO.ToString();
+                                    estudiantesNombreCompleto.Add(new SelectListItem
+                                    {
+                                        Text = nombreCompleto,
+                                        Value = id
+                                    });
+                                }
+                            }
+                            @Html.DropDownListFor(model => model.ID_USUARIO, estudiantesNombreCompleto, htmlAttributes: new { @class = "form-control", @style = "display: block;" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Cursos", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div>
+                            @Html.DropDownListFor(model => model.ID_CURSO, new SelectList(ViewBag.cursos, "ID_CURSO", "NOMBRE"), htmlAttributes: new { @class = "form-control", @style = "display: block;" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Instituciones", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div>
+                            @Html.DropDownListFor(model => model.ID_INSTITUCION, new SelectList(ViewBag.Instituciones, "ID_INSTITUCION", "NOMBRE"), htmlAttributes: new { @class = "form-control", @style = "display: block;" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Descripción", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div>
+                            @Html.TextAreaFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "materialize-textarea form-control", @style = "outline: none;" } })
+                            @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Fecha", htmlAttributes: new { @class = "control-label col-md-2 " })
+                        <div>
+                            @Html.EditorFor(model => model.FECHA_HORA, new { htmlAttributes = new { @class = "datepicker" } })
+                            @Html.ValidationMessageFor(model => model.FECHA_HORA, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Hora", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div>
+                            @Html.Editor("Hora", new { htmlAttributes = new { @class = "timepicker" } })
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            @Html.ActionLink("Cancelar", "RegistrarEstudiante", "Profesor", null, new { @class = "waves-effect waves-light btn-small" })
+                            <input type="submit" value="Asignar" class="btn btn-small" />
+                        </div>
+                    </div>
+
+
+                </div>
+            }
+        </div>
+
+    </div>
+
+    
+</section>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems, {format: 'dd/mm/yyyy'});
+    });
+
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.timepicker');
+          var instances = M.Timepicker.init(elems, { twelveHour: true});
+  });
+
+
+</script>
+
+
+<div class="form-group">
+    @Html.Label("Fecha", htmlAttributes: new { @class = "control-label col-md-2" })
+    <div>
+        @Html.EditorFor(model => model.FECHA_HORA, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.FECHA_HORA, "", new { @class = "text-danger" })
+    </div>
+</div>

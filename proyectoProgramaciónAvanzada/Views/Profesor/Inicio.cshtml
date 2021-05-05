@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col xl6 offset-xl3 l6 offset-l3 m6 offset-m3 s12 login">
+        <div class="card">
+
+            <div class="card-action blue darken-4 white-text">
+                <h3>Ingreso</h3>
+            </div>
+            <form action="~/Profesor/RegistrarEstudiante" method="post">
+                <div class="card-content">
+                    <div class="form-field">
+                        <label for="correo">Correo:</label>
+                        <input type="text" id="correo" name="correo">
+                    </div><br>
+
+                    <div class="form-field">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" id="contraseña" name="contraseña">
+                    </div>
+                    <br>
+                    <input class="waves-effect waves-light btn" type="submit" value="Ingresar" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

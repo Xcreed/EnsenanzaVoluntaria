@@ -1,0 +1,57 @@
+﻿@model proyectoProgramaciónAvanzada.Models.CALIFICACION_TUTORIA
+
+@{
+    ViewBag.Title = "CalificaProfe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+    <div class="container">
+        <h2 style="text-align:center">Calificación Profesor</h2>
+
+        <h4 style="color: green;">@ViewBag.exito</h4>
+        <h4 style="color: red;">@ViewBag.error</h4>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.Label("Profesores", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div>
+                        @{
+                            List<SelectListItem> profesores = new List<SelectListItem>();
+                            foreach (var profesor in ViewBag.Profesores)
+                            {
+                                var nombreCompleto = profesor.NOMBRE + " " + profesor.APELLIDO1 + " " + profesor.APELLIDO2;
+                                var id = profesor.ID_USUARIO.ToString();
+                                profesores.Add(new SelectListItem
+                                {
+                                    Text = nombreCompleto,
+                                    Value = id
+                                });
+                            }
+                        }
+                        @Html.DropDownListFor(model => model.ID_USUARIO, profesores, htmlAttributes: new { @class = "form-control", @style = "display: block;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Calificación:", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <p class="range-field">
+                        <input type="range" name="CALIFICACION" id="test5" min="0" max="5" />
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink("Volver", "Index", "Estudiante", null, new { @class = "waves-effect waves-light btn-small" })
+                        <input type="submit" value="Calificar" class="btn btn-small" />
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+</section>

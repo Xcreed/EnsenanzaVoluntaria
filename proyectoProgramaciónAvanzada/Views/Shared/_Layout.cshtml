@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bodyFlex")
+    @Styles.Render("~/Content/iconos")
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    @if (Request.IsAuthenticated)
+    {
+
+        if (Roles.IsUserInRole(User.Identity.Name, "estudiante"))
+        {
+            @Html.Partial("NavBarEstudiante")
+        }
+        else if (Roles.IsUserInRole(User.Identity.Name, "profesor"))
+        {
+            @Html.Partial("NavBarProfesor")
+        }
+        else 
+        {
+            @Html.Partial("NavBarAdmin")
+        }
+
+    }
+    else
+    {
+        <div>
+            <nav class="nav-fixed">
+                <div class="nav-wrapper">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left: 5px;">
+                        Enseñanza Voluntaria
+                    </ul>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>@Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    }
+
+
+    @RenderBody()
+
+
+    <footer class="page-footer grey darken-2" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Enseñanza voluntaria</h5>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Contacto</h5>
+                    <ul>
+                        <p>ejemplo@gmail.com</p>
+                        <p>+(506) 8888-8888</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Enseñanza voluntaria
+                <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/campaign/landing.php?campaign_id=1636795897&extra_1=s%7Cc%7C314049608549%7Ce%7Cfacebook%7C&placement=&creative=314049608549&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1636795897%26adgroupid%3D64025017178%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D1003673%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAiAwrf-BRA9EiwAUWwKXmWLS7zIejIPnQwnKzu9lWT6w8qPGY5qIO0RGb11392qKKUx7ZHydRoCYoUQAvD_BwE"><i style="font-size: 40px; margin-right: 10px" class="fab fa-facebook"></i></a>
+                <a class="grey-text text-lighten-4 right" href="https://www.instagram.com/"><i style="font-size: 40px; margin-right: 10px" class="fab fa-instagram"></i></a>
+                <a class="grey-text text-lighten-4 right" href="https://www.instagram.com/"><i style="font-size: 40px; margin-right: 10px" class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/materialize")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

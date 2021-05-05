@@ -1,0 +1,115 @@
+﻿@model proyectoProgramaciónAvanzada.Models.USUARIOS
+
+@{
+    ViewBag.Title = "InsertarEstudiante";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="cuadro" style="margin: 10px">
+
+    <div class="container">
+
+
+
+        @using (Html.BeginForm("InsertarEstudiante", "Profesor", "Profesor/RegistrarEstudiante", FormMethod.Post, new { @class = "col s12" }))
+        {
+            @Html.AntiForgeryToken()
+
+            
+
+
+        <div class="form-horizontal">
+
+            <h2>Registro de estudiante</h2>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+
+            <input type="hidden" value="@ViewBag.loginID" name="loginID" />
+            <input type="hidden" value="@ViewBag.rolID" name="rolID" />
+            @Html.LabelFor(model => model.CEDULA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CEDULA, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CEDULA, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NOMBRE, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NOMBRE, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.APELLIDO1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.APELLIDO1, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.APELLIDO1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.APELLIDO2, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.APELLIDO2, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.APELLIDO2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TELEFONO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TELEFONO, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TELEFONO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    @Html.Label("Nombre de la institución:", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div>
+                        @Html.DropDownListFor(model => model.ID_INSTITUCION, new SelectList(ViewBag.institucion, "ID_INSTITUCION", "NOMBRE"), htmlAttributes: new { @class = "form-control", @style = "display: block;" })
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @Html.ActionLink("Cancelar", "RegistrarEstudiante", "Profesor", null, new { @class = "waves-effect waves-light btn-small" })
+                    <input type="submit" value="Insertar" class="btn btn-small" />
+
+                </div>
+            </div>
+        </div>
+
+
+        }
+
+    </div>
+
+        
+
+
+
+        
+
+        
+
+    
+
+</div>
+
+
+
+
+<div style="margin-left: 150px; margin-top: 10px">
+
+
+
+
+</div>

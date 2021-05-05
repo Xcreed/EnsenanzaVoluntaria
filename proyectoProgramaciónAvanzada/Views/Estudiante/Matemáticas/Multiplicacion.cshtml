@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Multiplicacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <hr />
+    <h2>¿Qué es la Multiplicación?</h2>
+    <p>La multiplicación es la operación matemática que consiste en hallar el resultado de sumar un número tantas veces como indique otro.</p>
+    <img class="materialboxed" width="300" src="../../Imagenes/multiplicacion ejemplo.jpg" />
+    <br />
+    <hr />
+    <h2>Pasos Para Resolver una Multiplicación de Dos Cifras:</h2>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">1. Multiplicar las unidades del multiplicador por el multiplicando y el resultado escribirlo en la fila de abajo.</div>
+            <div class="collapsible-body"><span><img class="materialboxed" width="300" src="../../Imagenes/paso_1_multiplicacion dos cifras.png" /><br />Vamos a ver un ejemplo. Si multiplicamos 781 x 95, lo primero que hay que hacer es multiplicar por 5, que son las unidades de 95, por cada una de las cifras del multiplicando de derecha a izquierda y poner el resultado, 3905, en la fila de abajo, como muestra la imagen.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">2. Multiplicar las decenas del multiplicador por el multiplicando y el resultado escribirlo en la fila de abajo pero desplazado una posición a la izquierda.</div>
+            <div class="collapsible-body"><span><img class="materialboxed" width="300" src="../../Imagenes/paso_2_multiplicacion dos cifras.png" /><br />Seguimos con el ejemplo. Ahora multiplicamos el 9, ya que son las decenas del multiplicador 95, por el multiplicando 781. El resultado 7029 habrá que escribirlo debajo de 3905 pero desplazándolo una posición hacia la izquierda.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header">3. Sumar los productos.</div>
+            <div class="collapsible-body"><span><img class="materialboxed" width="300" src="../../Imagenes/paso_3_multiplicacion dos cifras.png" /><br />Como vemos en la imagen sumamos los productos y el resultado de la multiplicación es 74 195</span></div>
+        </li>
+    </ul>
+    <div class="form-group" style="margin-top:25px">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Volver", "Index", null, null, new { @class = "waves-effect waves-light btn-small" })
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>

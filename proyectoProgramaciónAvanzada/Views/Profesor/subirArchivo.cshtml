@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "subirArchivo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<section>
+
+    <div class="container">
+
+        <h2 style="text-align: center;">Seleccione el archivo a subir:</h2>
+
+
+        <div style="text-align:center">
+
+            <img src="~/Imagenes/gif subir archivo.gif" style="width:40%">
+
+            @using (Html.BeginForm("subirArchivo", "Profesor", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="file" />
+                <input class="waves-effect waves-light btn-small" type="submit" value="Subir Archivo" style="display:block; margin:auto; width: 200px; margin-top: 25px; color:white" />
+            }
+        </div>
+
+    </div>
+
+</section>
